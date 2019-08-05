@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import restaurantLists from './sample.json';
 
-const RestaurantContext = React.context();
+const RestaurantContext = React.createContext();
 
 class RestaurantProvider extends Component {
     state =  {
@@ -27,4 +27,4 @@ class RestaurantProvider extends Component {
 
 const RestaurantConsumer = RestaurantContext.Consumer;
 
-export default { RestaurantProvider, RestaurantConsumer };
+export { RestaurantProvider, RestaurantConsumer };
